@@ -1,16 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-export default function ServiceBrand({ setCurrentPage, isDarkMode }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Trigger animation slightly after mount
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 50);
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function ServiceBrand({ setCurrentPage }) {
   const screenshots = [
     {
       id: 1,
@@ -42,24 +32,19 @@ export default function ServiceBrand({ setCurrentPage, isDarkMode }) {
   // Duplicate the array to create a seamless infinite loop
   const duplicatedScreenshots = [...screenshots, ...screenshots];
 
+  const whatsappNumber = '919490056028';
   const whatsappMessage = encodeURIComponent("Hi AURA UX! I'm interested in building a premium website for my brand. Let's collaborate!");
 
   return (
-    <div className={`relative min-h-screen w-full flex flex-col pt-24 pb-12 overflow-hidden px-4 md:px-6 transition-colors duration-500 ${
-      isDarkMode ? 'bg-[#07060A]' : 'bg-[#FBF9F4]'
-    }`}>
+    <div className="relative min-h-screen w-full flex flex-col pt-24 pb-12 overflow-hidden px-4 md:px-6 bg-[#FBF9F4] text-[#1F1A15]">
       {/* Background Glow */}
-      <div className={`absolute top-1/3 right-1/4 w-[300px] h-[300px] rounded-full blur-[80px] pointer-events-none opacity-20 ${
-        isDarkMode ? 'bg-[#D4AF37]/5' : 'bg-[#8C6239]/5'
-      }`} />
+      <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] rounded-full blur-[80px] pointer-events-none opacity-20 bg-[#8C6239]/5" />
 
       {/* Back Button */}
       <div className="max-w-6xl mx-auto w-full mb-6 z-10">
         <button 
           onClick={() => setCurrentPage('services')}
-          className={`flex items-center space-x-2 text-xs uppercase tracking-widest font-semibold transition-colors ${
-            isDarkMode ? 'text-gray-400 hover:text-[#D4AF37]' : 'text-[#7A7065] hover:text-[#8C6239]'
-          }`}
+          className="flex items-center space-x-2 text-xs uppercase tracking-widest font-semibold transition-colors text-[#7A7065] hover:text-[#8C6239]"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -73,10 +58,7 @@ export default function ServiceBrand({ setCurrentPage, isDarkMode }) {
         {/* Animated Title Container */}
         <div className="relative h-16 md:h-20 w-full mb-8 flex items-start justify-start">
           <h2 className="font-serif font-bold tracking-tight leading-none text-3xl md:text-5xl text-left animate-title-transition">
-            <span className={isDarkMode 
-              ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#F6E2B3] via-[#D8B467] to-[#A9843D]' 
-              : 'bg-clip-text text-transparent bg-gradient-to-r from-[#503E21] via-[#AA7C11] to-[#251A07]'
-            }>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#503E21] via-[#AA7C11] to-[#251A07]">
               Best for Your Brand
             </span>
           </h2>
@@ -85,12 +67,8 @@ export default function ServiceBrand({ setCurrentPage, isDarkMode }) {
         {/* Horizontal Infinite Marquee Carousel */}
         <div className="w-full overflow-hidden py-4 my-auto relative">
           {/* Subtle gradient overlays on sides to fade images in/out */}
-          <div className={`absolute top-0 bottom-0 left-0 w-16 md:w-32 z-10 pointer-events-none bg-gradient-to-r ${
-            isDarkMode ? 'from-[#07060A] to-transparent' : 'from-[#FBF9F4] to-transparent'
-          }`} />
-          <div className={`absolute top-0 bottom-0 right-0 w-16 md:w-32 z-10 pointer-events-none bg-gradient-to-l ${
-            isDarkMode ? 'from-[#07060A] to-transparent' : 'from-[#FBF9F4] to-transparent'
-          }`} />
+          <div className="absolute top-0 bottom-0 left-0 w-16 md:w-32 z-10 pointer-events-none bg-gradient-to-r from-[#FBF9F4] to-transparent" />
+          <div className="absolute top-0 bottom-0 right-0 w-16 md:w-32 z-10 pointer-events-none bg-gradient-to-l from-[#FBF9F4] to-transparent" />
 
           {/* Marquee Track */}
           <div className="animate-marquee">
@@ -99,11 +77,7 @@ export default function ServiceBrand({ setCurrentPage, isDarkMode }) {
                 key={`${shot.id}-${idx}`}
                 className="w-[260px] md:w-[380px] mx-2 md:mx-4 flex-shrink-0 group"
               >
-                <div className={`relative aspect-video rounded-xl overflow-hidden border transition-all duration-500 shadow-md ${
-                  isDarkMode 
-                    ? 'border-white/5 bg-[#0C0B10] group-hover:border-[#D4AF37]/50 shadow-[0_0_20px_rgba(0,0,0,0.3)]' 
-                    : 'border-[#8C6239]/10 bg-white group-hover:border-[#8C6239]/40 shadow-[0_5px_15px_-5px_rgba(140,98,57,0.08)]'
-                }`}>
+                <div className="relative aspect-video rounded-xl overflow-hidden border border-[#8C6239]/10 bg-white group-hover:border-[#8C6239]/40 shadow-[0_5px_15px_-5px_rgba(140,98,57,0.08)] transition-all duration-500">
                   <img 
                     src={shot.image} 
                     alt={shot.title} 
@@ -124,24 +98,20 @@ export default function ServiceBrand({ setCurrentPage, isDarkMode }) {
         {/* Small Description & WhatsApp Call to Action */}
         <div className="max-w-2xl mx-auto text-center mt-10 mb-6 animate-fadeIn">
           {/* Brief Description */}
-          <p className={`text-xs md:text-sm leading-relaxed mb-8 font-light ${
-            isDarkMode ? 'text-gray-400' : 'text-[#504A43]'
-          }`}>
+          <p className="text-xs md:text-sm leading-relaxed mb-8 font-light text-[#504A43]">
             We create pixel-perfect digital ecosystems that load in milliseconds and deliver premium user experiences. 
             From highly interactive administrative panels and SaaS interfaces to client-facing portals, 
             our websites are tailored to convert visual aesthetics into corporate success.
           </p>
 
           {/* Interactive sentence */}
-          <h3 className={`text-sm md:text-base font-medium tracking-wide mb-6 ${
-            isDarkMode ? 'text-white' : 'text-[#1F1A15]'
-          }`}>
+          <h3 className="text-sm md:text-base font-medium tracking-wide mb-6 text-[#1F1A15]">
             Have a project in mind? Let's turn your vision into a digital masterpiece.
           </h3>
 
           {/* WhatsApp Interactive CTA */}
           <a
-            href={`https://wa.me/919999999999?text=${whatsappMessage}`}
+            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 px-8 py-3.5 rounded-full text-white font-semibold text-xs md:text-sm tracking-wider uppercase border transition-all duration-300 scale-100 hover:scale-102 active:scale-95 bg-emerald-600 border-emerald-500 hover:bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.35)]"

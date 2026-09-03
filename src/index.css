@@ -3,6 +3,16 @@
 @theme {
   --font-serif: "Cinzel", serif;
   --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-background: #FBF9F4;
+  --color-foreground: #1F1A15;
+  --color-muted: #F3EFE6;
+  --color-muted-foreground: #7A7065;
+  --color-secondary: #F5EFE6;
+  --color-secondary-foreground: #1F1A15;
+  --color-border: rgba(140, 98, 57, 0.15);
+  --color-primary: #8C6239;
+  --color-primary-foreground: #FFFFFF;
 }
 
 /* Custom keyframes and animations */
