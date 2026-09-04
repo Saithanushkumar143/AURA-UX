@@ -9,10 +9,10 @@ export default function Services({ setCurrentPage }) {
     {
       id: 'service-brand',
       tag: 'Corporate UX & Web',
-      title: 'Best for Your Brand',
+      title: 'Best for Brands',
       description: 'High-performance bespoke websites, SaaS interfaces, and user-centric wireframes tailored for corporate distinction.',
       imageSrc: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Best for Your Brand - Corporate Web and UX',
+      imageAlt: 'Best for Brands - Corporate Web and UX',
       brandLogoSrc: '/logo.jpg',
       brandName: 'AURA Enterprise',
       promoCode: 'PREMIUM TIER',
@@ -29,51 +29,6 @@ export default function Services({ setCurrentPage }) {
       brandName: 'AURA Moments',
       promoCode: '3D INTERACTIVE',
       onClick: () => setCurrentPage('service-surprise'),
-    },
-    {
-      id: 'service-ecommerce',
-      tag: 'E-Commerce & Retail',
-      title: 'Haute E-Commerce Studios',
-      description: 'High-fashion digital storefronts, interactive 3D product stages, and friction-free luxury checkout architectures.',
-      imageSrc: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Haute E-Commerce Studios',
-      brandLogoSrc: '/logo.jpg',
-      brandName: 'AURA Commerce',
-      promoCode: 'CUSTOM BUILT',
-      onClick: () => {
-        const msg = encodeURIComponent("Hi AURA UX! I'm interested in building a high-end E-Commerce Store for my brand.");
-        window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
-      },
-    },
-    {
-      id: 'service-gala',
-      tag: 'Exclusive Invitations',
-      title: 'VIP Digital Galas & RSVPs',
-      description: 'Handcrafted luxury digital invitations with real-time guest tracking, interactive seating plans, and cinematic agendas.',
-      imageSrc: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'VIP Digital Galas and RSVPs',
-      brandLogoSrc: '/logo.jpg',
-      brandName: 'AURA Privé',
-      promoCode: 'CONCIERGE RSVP',
-      onClick: () => {
-        const msg = encodeURIComponent("Hi AURA UX! I want to create a Luxury Digital Invitation & RSVP portal for our event.");
-        window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
-      },
-    },
-    {
-      id: 'service-3d',
-      tag: 'Next-Gen Web',
-      title: 'Spatial 3D & WebGL Experiences',
-      description: 'Immersive 3D interactive web experiences, kinetic physics, and spatial digital storytelling for visionary brands.',
-      imageSrc: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Spatial 3D and WebGL Experiences',
-      brandLogoSrc: '/logo.jpg',
-      brandName: 'AURA Labs',
-      promoCode: 'SPATIAL 3D',
-      onClick: () => {
-        const msg = encodeURIComponent("Hi AURA UX! I'd love to build an Immersive 3D / WebGL Experience for our web presence.");
-        window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
-      },
     },
   ];
 

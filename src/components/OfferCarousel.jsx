@@ -93,20 +93,25 @@ const OfferCarousel = React.forwardRef(({ offers, className, ...props }, ref) =>
   return (
     <div ref={ref} className={cn("relative w-full group py-2", className)} {...props}>
       {/* Left Scroll Button */}
-      <button
-        type="button"
-        onClick={() => scroll("left")}
-        className="absolute top-1/2 -translate-y-1/2 -left-2 sm:-left-4 z-20 w-10 h-10 rounded-full bg-white/95 backdrop-blur-md border border-[#8C6239]/20 flex items-center justify-center text-[#1F1A15] shadow-md opacity-80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#8C6239] hover:text-white hover:scale-105 active:scale-95 cursor-pointer"
-        aria-label="Scroll Left"
-      >
-        <ChevronLeft className="w-5 h-5" />
-      </button>
+      {offers.length > 2 && (
+        <button
+          type="button"
+          onClick={() => scroll("left")}
+          className="absolute top-1/2 -translate-y-1/2 -left-2 sm:-left-4 z-20 w-10 h-10 rounded-full bg-white/95 backdrop-blur-md border border-[#8C6239]/20 flex items-center justify-center text-[#1F1A15] shadow-md opacity-80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#8C6239] hover:text-white hover:scale-105 active:scale-95 cursor-pointer"
+          aria-label="Scroll Left"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+      )}
 
       {/* Scrollable Carousel Track */}
       <div
         ref={scrollContainerRef}
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        className="flex space-x-4 sm:space-x-6 overflow-x-auto pb-6 pt-2 px-2 sm:px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden scroll-smooth"
+        className={cn(
+          "flex space-x-4 sm:space-x-6 md:space-x-8 overflow-x-auto pb-6 pt-2 px-2 sm:px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden scroll-smooth",
+          offers.length <= 2 && "justify-start md:justify-center"
+        )}
       >
         {offers.map((offer) => (
           <OfferCard key={offer.id} offer={offer} />
@@ -114,14 +119,16 @@ const OfferCarousel = React.forwardRef(({ offers, className, ...props }, ref) =>
       </div>
 
       {/* Right Scroll Button */}
-      <button
-        type="button"
-        onClick={() => scroll("right")}
-        className="absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-4 z-20 w-10 h-10 rounded-full bg-white/95 backdrop-blur-md border border-[#8C6239]/20 flex items-center justify-center text-[#1F1A15] shadow-md opacity-80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#8C6239] hover:text-white hover:scale-105 active:scale-95 cursor-pointer"
-        aria-label="Scroll Right"
-      >
-        <ChevronRight className="w-5 h-5" />
-      </button>
+      {offers.length > 2 && (
+        <button
+          type="button"
+          onClick={() => scroll("right")}
+          className="absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-4 z-20 w-10 h-10 rounded-full bg-white/95 backdrop-blur-md border border-[#8C6239]/20 flex items-center justify-center text-[#1F1A15] shadow-md opacity-80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#8C6239] hover:text-white hover:scale-105 active:scale-95 cursor-pointer"
+          aria-label="Scroll Right"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      )}
     </div>
   );
 });
