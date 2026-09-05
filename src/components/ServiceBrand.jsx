@@ -1,76 +1,46 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Layout, Code2, Sliders, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Code2, Sliders, ExternalLink } from 'lucide-react';
 
 export default function ServiceBrand({ setCurrentPage }) {
   const whatsappNumber = '919490056028';
 
   const categories = [
     {
-      id: 'landing-pages',
-      label: 'Landing Pages',
-      icon: Layout,
-      title: 'High-Converting Landing Pages',
-      description: 'Templates designed for high-conversion marketing, product showcases, SaaS, agencies, and executive advisory.',
-      projects: [
-        {
-          id: 'lp-cloudflow',
-          img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura CloudFlow SaaS',
-          des: 'Conversion-optimized SaaS landing page featuring dynamic billing switchers (monthly/annual), feature breakdown tabs, interactive metrics dashboard preview, and FAQ accordion.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/saas-startup',
-        },
-        {
-          id: 'lp-apex-agency',
-          img: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura Apex Agency Pro',
-          des: 'Dark-modern digital agency & B2B portfolio landing page with service grids, client case studies carousel, testimonial marquee, and interactive quote estimator.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/corporate-agency',
-        },
-        {
-          id: 'lp-vanguard',
-          img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura Vanguard Advisory',
-          des: 'Executive consulting & advisory landing page equipped with service capability overviews, leadership roster, appointment booking, and ROI valuation tools.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/consulting-pro',
-        },
-      ],
-    },
-    {
-      id: 'full-stack-web',
-      label: 'Full Stack Web',
+      id: 'affordable-websites',
+      label: 'Affordable Websites',
       icon: Code2,
-      title: 'Full Stack Web (E-Commerce & Dynamic Apps)',
+      title: 'Affordable Websites (E-Commerce & Dynamic Apps)',
       description: 'Stateful, transaction-ready web application templates with shopping carts, checkout engines, and product filtering.',
       projects: [
         {
           id: 'fsw-yournextstore',
           img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura YourNextStore Commerce',
-          des: 'Modern Next.js e-commerce application featuring an interactive slide-out shopping bag drawer, color/size variant selectors, free shipping progress bar, promo code engine, and express checkout flow.',
+          title: 'Discover Your Kind of Style — Aura',
+          des: 'An easy-to-use online store with a smooth shopping cart, size & color options, promo discount support, and fast checkout.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/your-next-store',
         },
         {
           id: 'fsw-yns-editorial',
           img: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura YNS Editorial Store',
-          des: 'Artisanal editorial e-commerce platform with dynamic collection filtering, price sorting, interactive quick-view modal, custom SVG artwork, and live cart state counter.',
+          title: 'For things you’ll love — Aura',
+          des: 'A stylish online shop featuring product filtering, price sorting, quick item preview, and real-time cart updates.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/yns-editorial-store',
         },
       ],
     },
     {
-      id: 'customisation',
-      label: 'Customisation',
+      id: 'premium-websites',
+      label: 'Premium',
       icon: Sliders,
-      title: 'Customisation (Bespoke & Interactive Hospitality)',
+      title: 'Premium (Bespoke & Interactive Hospitality)',
       description: 'Bespoke, brand-tailored templates featuring rich custom UI components, 3D carousels, and reservation booking systems.',
       projects: [
         {
           id: 'cust-zafran',
           img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura Zafran Heritage Dining',
-          des: 'Michelin-grade restaurant & luxury hospitality website featuring a 3D CoverFlow signature dish carousel, infinite accolades marquee, interactive table reservation booking modal, tasting menu explorer, and sommelier wine pairing guide.',
+          title: 'Where Every Dish Tells a Story — Aura',
+          des: 'A luxury dining and restaurant website featuring interactive dish showcases, online table reservation booking, tasting menus, and wine pairing guides.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/heritage-dining',
         },
       ],

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Gift, Heart, Calendar, Sparkles, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Gift, Heart, Calendar, ExternalLink } from 'lucide-react';
 
 export default function ServiceSurprise({ setCurrentPage }) {
   const whatsappNumber = '919490056028';
@@ -16,28 +16,28 @@ export default function ServiceSurprise({ setCurrentPage }) {
         {
           id: 'bday-cinematic',
           img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80',
-          title: 'Cinematic Birthday Film & Letter',
+          title: 'A Birthday Worth Remembering — Aura',
           des: 'Four-act cinematic birthday film with interactive Cupid bow & arrow, rose burst, blossoming heart canvas tree, polaroid gallery, and wax-sealed love letter.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/cinematic-birthday',
         },
         {
           id: 'bday-luxe',
           img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=80',
-          title: 'Aura Luxe Birthday Gala',
+          title: 'Make Their Birthday Feel Special — Aura',
           des: 'Ultra-luxurious birthday greeting portal with interactive candle blowout, typed message with voice note player, polaroid gallery with lightbox, and surprise reveal.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-lux-celebration',
         },
         {
           id: 'bday-scrapbook',
           img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80',
-          title: 'Bestie Scrapbook Birthday',
+          title: 'Turn Their Day Into a Memory — Aura',
           des: 'Cute notebook & scrapbook-style birthday bash site with scotch-taped sticky notes, polaroid memory wall, inside-jokes chat stream, and Bestie Certificate.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-bestie-scrapbook',
         },
         {
           id: 'bday-surprise-box',
           img: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80',
-          title: 'Unwrapping Gift Surprise',
+          title: 'A Little Magic for Their Big Day — Aura',
           des: 'Interactive multi-scene gift unboxing experience featuring a 3D animated gift box that shakes and explodes with confetti, love coupons notepad, and wish card.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-surprise-box',
         },
@@ -45,77 +45,54 @@ export default function ServiceSurprise({ setCurrentPage }) {
     },
     {
       id: 'anniversary-surprise',
-      label: 'Anniversary Surprise',
+      label: 'Couple Surprises',
       icon: Heart,
-      title: 'Emotional Anniversary Surprises',
+      title: 'Emotional Couple Surprises',
       description: 'Romantic anniversary memory timelines, marriage proposal stories, 3D flippable reasons why I love you, and couple storybooks.',
       projects: [
         {
           id: 'anniv-forever-vows',
           img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
-          title: 'Forever & Always Anniversary',
+          title: 'A LITTLE BOX OF FOREVER — AURA 💍✨',
           des: 'Romantic marriage & anniversary proposal story featuring postal love letter hero, Save-the-Date card, interactive 3D Velvet Ring Box that opens on click, and drafted vows notebook.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/anniversary-forever-vows',
         },
         {
           id: 'anniv-reasons-jar',
           img: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80',
-          title: 'Reasons Why I Love You',
+          title: 'A Jar Full of Reasons to Love You — Aura',
           des: 'Doodly love letter with a sticky Heart-Jar progress counter, 9 flippable 3D cards revealing cute GIFs & heartfelt reasons, taped polaroid wall, and heart-tap finale.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/reasons-love-jar',
         },
         {
           id: 'anniv-love-wifey',
           img: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80',
-          title: 'Hi Wifey & Love Note',
+          title: 'A Little Love Note for You — Aura',
           des: 'Playful 7-scene love note story featuring doodle backdrop, shimmer typography, interactive "Are You Mine?" decision cards, kiss sticker animation, and couple polaroid frame.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/love-note-wifey',
         },
       ],
     },
     {
-      id: 'wedding-invitations',
-      label: 'Wedding Invitations',
+      id: 'invitations',
+      label: 'Invitations',
       icon: Calendar,
-      title: 'Luxury Digital Wedding Invitations',
-      description: 'Couture digital wedding invitations, animated RSVP portals, couple love journeys, event schedules, and destination guide books.',
+      title: 'Luxury Digital Invitations',
+      description: 'Couture digital invitations for 1st birthdays, luxury weddings, milestone celebrations, and interactive event portals.',
       projects: [
         {
-          id: 'wed-eternal-union',
+          id: 'inv-1st-bday',
+          img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80',
+          title: '1st Birthday Celebration Invitation — Aura',
+          des: 'Soon we’ll launch!',
+          isComingSoon: true,
+        },
+        {
+          id: 'inv-wedding',
           img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
-          title: 'Eternal Union Luxury Wedding Portal',
-          des: 'Opulent gold-foiled digital wedding invitation with animated calligraphy, ceremony itinerary timeline, interactive RSVP manager, and accommodation guide.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/wedding-elegance',
-        },
-        {
-          id: 'wed-royal-destination',
-          img: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80',
-          title: 'Royal Destination Wedding Showcase',
-          des: 'Cinematic destination wedding hub featuring palace backdrop video, multi-day sangeet/reception schedules, flight & stay concierge, and gift registry.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/wedding-elegance',
-        },
-      ],
-    },
-    {
-      id: 'other',
-      label: 'Other',
-      icon: Sparkles,
-      title: 'Milestone Celebrations & Bespoke Moments',
-      description: 'Tailored digital surprises for graduations, baby showers, farewells, festivals, and custom memory keepsakes.',
-      projects: [
-        {
-          id: 'oth-golden-gala',
-          img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80',
-          title: 'Golden Jubilee & Milestone Gala',
-          des: 'Distinguished milestone celebration portal with interactive audio guestbook, archival photo restoration sliders, and congratulations board.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/anniversary-gala',
-        },
-        {
-          id: 'oth-custom-keepsake',
-          img: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1200&q=80',
-          title: 'Bespoke Milestone Memory Keepsake',
-          des: 'Custom-tailored interactive memory book with voice messages, personalized quiz challenges, timeline chapters, and celebration soundscapes.',
-          templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-surprise-box',
+          title: 'Luxury Wedding Invitation — Aura',
+          des: 'Soon we’ll launch!',
+          isComingSoon: true,
         },
       ],
     },
@@ -126,15 +103,19 @@ export default function ServiceSurprise({ setCurrentPage }) {
   const activeCategory = categories.find((c) => c.id === activeCategoryId) || categories[0];
 
   const getWhatsAppUrl = (project) => {
-    const text = `Hi AURA UX! I'm interested in the "${project.title}" template (${activeCategory.label}) for my celebration.\n\n` +
-      `*Template:* ${project.title}\n` +
+    const linkText = project.isComingSoon || !project.templateUrl
+      ? `*Status:* Launching Soon\n\n`
+      : `*Template Link:*\n${project.templateUrl}\n\n`;
+
+    const text = `Hi AURA UX! I'm interested in "${project.title}" (${activeCategory.label}) for my celebration.\n\n` +
       `*Overview:* ${project.des}\n` +
-      `*Template Link:*\n${project.templateUrl}\n\n` +
+      linkText +
       `Let's discuss customizing and creating this surprise!`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   };
 
   const handleCardClick = (project) => {
+    if (project.isComingSoon || !project.templateUrl) return;
     window.open(project.templateUrl, '_blank');
   };
 
@@ -226,7 +207,7 @@ export default function ServiceSurprise({ setCurrentPage }) {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ ease: 'easeOut', duration: 0.4, delay: index * 0.08 }}
                     viewport={{ once: true }}
-                    className={`relative ${colSpanClass} group overflow-hidden rounded-2xl border border-[#8C6239]/20 bg-white shadow-sm hover:shadow-2xl hover:border-[#8C6239]/60 transition-all duration-500 flex flex-col justify-between cursor-pointer`}
+                    className={`relative ${colSpanClass} group overflow-hidden rounded-2xl border border-[#8C6239]/20 bg-white shadow-sm hover:shadow-2xl hover:border-[#8C6239]/60 transition-all duration-500 flex flex-col justify-between ${project.isComingSoon ? 'cursor-default' : 'cursor-pointer'}`}
                   >
                     <div className="relative w-full h-[250px] sm:h-[280px] md:h-[310px] overflow-hidden bg-[#F3EFE6]">
                       <img
@@ -240,12 +221,14 @@ export default function ServiceSurprise({ setCurrentPage }) {
                       {/* Top Badges */}
                       <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
                         <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-amber-300 border border-amber-400/30">
-                          Template
+                          {project.isComingSoon ? 'Coming Soon' : 'Template'}
                         </span>
-                        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 group-hover:bg-[#8C6239] group-hover:border-[#8C6239] transition-colors">
-                          <span>Open Template</span>
-                          <ExternalLink className="w-3 h-3 text-amber-300 group-hover:text-white" />
-                        </span>
+                        {!project.isComingSoon && (
+                          <span className="inline-flex items-center gap-1 text-[10px] font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 group-hover:bg-[#8C6239] group-hover:border-[#8C6239] transition-colors">
+                            <span>Open Template</span>
+                            <ExternalLink className="w-3 h-3 text-amber-300 group-hover:text-white" />
+                          </span>
+                        )}
                       </div>
                     </div>
 
