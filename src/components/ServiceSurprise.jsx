@@ -15,29 +15,29 @@ export default function ServiceSurprise({ setCurrentPage }) {
       projects: [
         {
           id: 'bday-cinematic',
-          img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80',
-          title: 'A Birthday Worth Remembering — Aura',
+          img: '/cinematic-birthday-preview.png',
+          title: 'AURA Cinematic — 4-Act Storytelling Birthday Film',
           des: 'Four-act cinematic birthday film with interactive Cupid bow & arrow, rose burst, blossoming heart canvas tree, polaroid gallery, and wax-sealed love letter.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/cinematic-birthday',
         },
         {
           id: 'bday-luxe',
-          img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=80',
-          title: 'Make Their Birthday Feel Special — Aura',
+          img: '/birthday-lux-celebration-preview.png',
+          title: 'AURA CandleGlow — Luxury Birthday Greeting Portal',
           des: 'Ultra-luxurious birthday greeting portal with interactive candle blowout, typed message with voice note player, polaroid gallery with lightbox, and surprise reveal.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-lux-celebration',
         },
         {
           id: 'bday-scrapbook',
-          img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80',
-          title: 'Turn Their Day Into a Memory — Aura',
+          img: '/birthday-bestie-scrapbook-preview.png',
+          title: 'AURA Scrapbook — Bestie Memory Wall & Sticky Notes',
           des: 'Cute notebook & scrapbook-style birthday bash site with scotch-taped sticky notes, polaroid memory wall, inside-jokes chat stream, and Bestie Certificate.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-bestie-scrapbook',
         },
         {
           id: 'bday-surprise-box',
-          img: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80',
-          title: 'A Little Magic for Their Big Day — Aura',
+          img: '/birthday-surprise-box-preview.png',
+          title: 'AURA SurpriseBox — 3D Animated Gift Box Explosion',
           des: 'Interactive multi-scene gift unboxing experience featuring a 3D animated gift box that shakes and explodes with confetti, love coupons notepad, and wish card.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/birthday-surprise-box',
         },
@@ -52,22 +52,22 @@ export default function ServiceSurprise({ setCurrentPage }) {
       projects: [
         {
           id: 'anniv-forever-vows',
-          img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
-          title: 'A LITTLE BOX OF FOREVER — AURA 💍✨',
+          img: '/anniversary-forever-vows-preview.png',
+          title: 'AURA ForeverVows — 3D Ring Box & Proposal Story',
           des: 'Romantic marriage & anniversary proposal story featuring postal love letter hero, Save-the-Date card, interactive 3D Velvet Ring Box that opens on click, and drafted vows notebook.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/anniversary-forever-vows',
         },
         {
           id: 'anniv-reasons-jar',
-          img: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80',
-          title: 'A Jar Full of Reasons to Love You — Aura',
+          img: '/reasons-love-jar-preview.png',
+          title: 'AURA LoveJar — 3D Flippable Reasons to Love You',
           des: 'Doodly love letter with a sticky Heart-Jar progress counter, 9 flippable 3D cards revealing cute GIFs & heartfelt reasons, taped polaroid wall, and heart-tap finale.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/reasons-love-jar',
         },
         {
           id: 'anniv-love-wifey',
-          img: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80',
-          title: 'A Little Love Note for You — Aura',
+          img: '/love-note-wifey-preview.png',
+          title: 'AURA LoveNote — Interactive Romantic Story & Notes',
           des: 'Playful 7-scene love note story featuring doodle backdrop, shimmer typography, interactive "Are You Mine?" decision cards, kiss sticker animation, and couple polaroid frame.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/celebrations/love-note-wifey',
         },
@@ -83,14 +83,14 @@ export default function ServiceSurprise({ setCurrentPage }) {
         {
           id: 'inv-1st-bday',
           img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80',
-          title: '1st Birthday Celebration Invitation — Aura',
+          title: 'AURA LittleStars — 1st Birthday Digital Invitation',
           des: 'Soon we’ll launch!',
           isComingSoon: true,
         },
         {
           id: 'inv-wedding',
           img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
-          title: 'Luxury Wedding Invitation — Aura',
+          title: 'AURA RoyalUnion — Couture Wedding Digital Invitation',
           des: 'Soon we’ll launch!',
           isComingSoon: true,
         },
@@ -125,11 +125,7 @@ export default function ServiceSurprise({ setCurrentPage }) {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col pt-24 pb-16 overflow-hidden px-4 md:px-8 bg-[#FBF9F4] text-[#1F1A15]">
-      {/* Background Luxury Ambient Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[350px] rounded-full blur-[110px] pointer-events-none opacity-25 bg-gradient-to-tr from-[#8C6239]/15 via-[#AA7C11]/10 to-transparent" />
-      <div className="absolute bottom-1/4 right-10 w-[300px] h-[300px] rounded-full blur-[90px] pointer-events-none opacity-20 bg-[#8C6239]/10" />
-
+    <div className="relative min-h-screen w-full flex flex-col pt-24 pb-16 overflow-hidden px-4 md:px-8 bg-transparent text-[#1F1A15]">
       {/* Back Button */}
       <div className="max-w-6xl mx-auto w-full mb-6 z-10">
         <button

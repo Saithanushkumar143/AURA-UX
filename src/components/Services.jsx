@@ -11,7 +11,7 @@ export default function Services({ setCurrentPage }) {
       tag: 'Corporate UX & Web',
       title: 'Best for Brands',
       description: 'High-performance bespoke websites, SaaS interfaces, and user-centric wireframes tailored for corporate distinction.',
-      imageSrc: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
+      imageSrc: '/service-brand-cover.png',
       imageAlt: 'Best for Brands - Corporate Web and UX',
       brandLogoSrc: '/logo.jpg',
       brandName: 'AURA Enterprise',
@@ -23,7 +23,7 @@ export default function Services({ setCurrentPage }) {
       tag: 'Celebrations & Gifts',
       title: 'Digital Surprises',
       description: 'Personalized interactive wishboards, anniversary memory timelines, and emotional milestone celebrations.',
-      imageSrc: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80',
+      imageSrc: '/service-surprise-cover.png',
       imageAlt: 'Digital Surprises - Milestone Websites',
       brandLogoSrc: '/logo.jpg',
       brandName: 'AURA Moments',
@@ -33,11 +33,7 @@ export default function Services({ setCurrentPage }) {
   ];
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden px-4 md:px-8 pt-24 pb-12 bg-[#FBF9F4] text-[#1F1A15]">
-      {/* Ambient Luxury Glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] rounded-full blur-[110px] pointer-events-none opacity-30 bg-[#8C6239]/10" />
-      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] rounded-full blur-[90px] pointer-events-none opacity-20 bg-[#AA7C11]/10" />
-
+    <div className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden px-4 md:px-8 pt-24 pb-12 bg-transparent text-[#1F1A15]">
       {/* Main Container */}
       <div className="relative z-10 max-w-6xl w-full flex flex-col items-center justify-center">
         {/* Header Section */}

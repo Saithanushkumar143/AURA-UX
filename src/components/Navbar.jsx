@@ -10,7 +10,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b bg-[#FBF9F4]/85 border-[#8C6239]/10 text-[#1F1A15] px-6 py-4 transition-colors duration-300">
+    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b ${
+      currentPage === 'home' ? 'bg-[#FBF9F4]/85' : 'bg-white/85'
+    } border-[#8C6239]/10 text-[#1F1A15] px-6 py-4 transition-colors duration-300`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo & Brand Name */}
         <div 
@@ -77,7 +79,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
 
       {/* Mobile Links Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 border-b py-4 px-6 flex flex-col space-y-4 animate-fadeIn bg-[#FBF9F4]/95 border-[#8C6239]/10">
+        <div className={`md:hidden absolute top-full left-0 right-0 border-b py-4 px-6 flex flex-col space-y-4 animate-fadeIn ${
+          currentPage === 'home' ? 'bg-[#FBF9F4]/95' : 'bg-white/95'
+        } border-[#8C6239]/10`}>
           {navLinks.map((link) => (
             <button
               key={link.id}

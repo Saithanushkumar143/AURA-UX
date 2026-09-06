@@ -15,15 +15,15 @@ export default function ServiceBrand({ setCurrentPage }) {
       projects: [
         {
           id: 'fsw-yournextstore',
-          img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80',
-          title: 'Discover Your Kind of Style — Aura',
+          img: '/your-next-store-preview.png',
+          title: 'AURA NextStore — Modern E-Commerce & Fashion Store',
           des: 'An easy-to-use online store with a smooth shopping cart, size & color options, promo discount support, and fast checkout.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/your-next-store',
         },
         {
           id: 'fsw-yns-editorial',
-          img: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80',
-          title: 'For things you’ll love — Aura',
+          img: '/yns-editorial-store-preview.png',
+          title: 'AURA Editorial — Minimalist Boutique & Lifestyle Store',
           des: 'A stylish online shop featuring product filtering, price sorting, quick item preview, and real-time cart updates.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/yns-editorial-store',
         },
@@ -33,15 +33,22 @@ export default function ServiceBrand({ setCurrentPage }) {
       id: 'premium-websites',
       label: 'Premium',
       icon: Sliders,
-      title: 'Premium (Bespoke & Interactive Hospitality)',
-      description: 'Bespoke, brand-tailored templates featuring rich custom UI components, 3D carousels, and reservation booking systems.',
+      title: 'Premium (Bespoke & Interactive Experiences)',
+      description: 'Bespoke, brand-tailored templates featuring rich custom UI components, 3D showcases, and luxury booking systems.',
       projects: [
         {
           id: 'cust-zafran',
-          img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
-          title: 'Where Every Dish Tells a Story — Aura',
+          img: '/heritage-dining-preview.png',
+          title: 'AURA Heritage — Luxury Dining & Restaurant Website',
           des: 'A luxury dining and restaurant website featuring interactive dish showcases, online table reservation booking, tasting menus, and wine pairing guides.',
           templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/heritage-dining',
+        },
+        {
+          id: 'prem-luxe-beauty',
+          img: '/luxe-beauty-preview.png',
+          title: 'AURA Luxe Beauty — Haute Artistry & Bridal Studio',
+          des: 'An ultra-luxury bespoke beauty and bridal artistry website featuring interactive portfolio showcases, curated service suites, and appointment booking.',
+          templateUrl: 'https://aurauxtemplates.vercel.app/templates/business/luxe-beauty',
         },
       ],
     },
@@ -70,11 +77,7 @@ export default function ServiceBrand({ setCurrentPage }) {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col pt-24 pb-16 overflow-hidden px-4 md:px-8 bg-[#FBF9F4] text-[#1F1A15]">
-      {/* Background Luxury Ambient Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[350px] rounded-full blur-[110px] pointer-events-none opacity-25 bg-gradient-to-tr from-[#8C6239]/15 via-[#AA7C11]/10 to-transparent" />
-      <div className="absolute bottom-1/4 right-10 w-[300px] h-[300px] rounded-full blur-[90px] pointer-events-none opacity-20 bg-[#8C6239]/10" />
-
+    <div className="relative min-h-screen w-full flex flex-col pt-24 pb-16 overflow-hidden px-4 md:px-8 bg-transparent text-[#1F1A15]">
       {/* Back Button */}
       <div className="max-w-6xl mx-auto w-full mb-6 z-10">
         <button
