@@ -15,7 +15,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      'next/link': path.resolve(__dirname, './src/components/ui/link-shim.tsx'),
     },
   },
 })

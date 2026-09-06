@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import ServiceBrand from './components/ServiceBrand';
 import ServiceSurprise from './components/ServiceSurprise';
+import Footer from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   return (
     <div className="min-h-screen bg-[#FBF9F4] text-[#1F1A15] font-sans antialiased selection:bg-[#D4AF37]/30">
+      {/* Initial Cinematic Preloader Screen */}
+      <Preloader />
+
       {/* Navigation Bar */}
       <Navbar 
         currentPage={currentPage} 
@@ -23,7 +28,7 @@ function App() {
             onExplore={() => setCurrentPage('services')} 
           />
         ) : (
-          <div className="min-h-screen w-full relative bg-white">
+          <div className="min-h-screen w-full relative bg-white flex flex-col justify-between">
             {/* Soft Yellow Glow */}
             <div
               className="absolute inset-0 z-0 pointer-events-none"
@@ -37,7 +42,7 @@ function App() {
             />
 
             {/* Page Content */}
-            <div className="relative z-10">
+            <div className="relative z-10 flex-1">
               {currentPage === 'services' && (
                 <Services 
                   setCurrentPage={setCurrentPage} 
@@ -54,7 +59,7 @@ function App() {
                 />
               )}
               {currentPage === 'contact' && (
-                <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 px-6">
+                <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 pb-16 px-6">
                   <h2 className="text-4xl font-bold tracking-tight mb-4 font-serif text-[#1F1A15]">Contact Us</h2>
                   <p className="text-center max-w-md text-[#7A7065]">
                     Reach us directly on WhatsApp for premium website collaborations and brand projects.
@@ -79,6 +84,9 @@ function App() {
                 </div>
               )}
             </div>
+
+            {/* Light Theme Footer (integrated on all pages except home) */}
+            <Footer setCurrentPage={setCurrentPage} />
           </div>
         )}
       </main>

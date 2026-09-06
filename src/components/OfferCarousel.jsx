@@ -3,41 +3,47 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const OfferCard = React.forwardRef(({ offer, index = 0 }, ref) => {
+const OfferCard = React.forwardRef(({ offer, index = 0, disableEntrance = false }, ref) => {
   const CardWrapper = motion.div;
 
   // Staggered 3D entrance parameters
   const isFirst = index % 2 === 0;
   const initialRotateY = isFirst ? -12 : 12;
 
+  const motionProps = disableEntrance
+    ? {}
+    : {
+        initial: {
+          opacity: 0,
+          y: 60,
+          scale: 0.94,
+          rotateY: initialRotateY,
+        },
+        animate: {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotateY: 0,
+        },
+        transition: {
+          duration: 0.75,
+          delay: 0.1 + index * 0.16,
+          ease: [0.22, 1, 0.36, 1],
+        },
+      };
+
   return (
     <CardWrapper
       ref={ref}
       onClick={offer.onClick}
-      initial={{
-        opacity: 0,
-        y: 60,
-        scale: 0.94,
-        rotateY: initialRotateY,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        rotateY: 0,
-      }}
-      transition={{
-        duration: 0.75,
-        delay: 0.1 + index * 0.16,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      {...motionProps}
       whileHover={{
         y: -10,
         transition: { type: "spring", stiffness: 400, damping: 25 },
       }}
       whileTap={{ scale: 0.98, y: -2 }}
       className={cn(
-        "relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] h-[400px] rounded-2xl overflow-hidden group/card snap-start cursor-pointer border border-[#8C6239]/20 bg-white shadow-[0_8px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_22px_45px_-8px_rgba(140,98,57,0.22)] hover:border-[#8C6239]/55 transition-all duration-300 flex flex-col select-none"
+        "relative flex-shrink-0 w-[300px] sm:w-[340px] md:w-[370px] lg:w-[390px] h-[435px] rounded-2xl overflow-hidden group/card snap-start cursor-pointer border border-[#8C6239]/25 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_24px_50px_-8px_rgba(140,98,57,0.25)] hover:border-[#8C6239]/60 transition-all duration-300 flex flex-col select-none"
       )}
       style={{
         backfaceVisibility: "hidden",
