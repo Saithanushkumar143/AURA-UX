@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://auraux.com/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://auraux.com/logo.jpg</image:loc>
+      <image:title>AURA UX Logo</image:title>
+      <image:caption>AURA UX - Premium Digital Experiences</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://auraux.com/service-brand-cover.png</image:loc>
+      <image:title>Best for Brands - Corporate Web and UX</image:title>
+      <image:caption>High-performance bespoke websites and SaaS interfaces</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://auraux.com/service-surprise-cover.png</image:loc>
+      <image:title>Digital Surprises - Milestone Websites</image:title>
+      <image:caption>Personalized interactive wishboards and anniversary memory timelines</image:caption>
+    </image:image>
+  </url>
+</urlset>
