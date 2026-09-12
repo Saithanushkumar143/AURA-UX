@@ -1,0 +1,25 @@
+﻿{
+  "name": "AURA UX — Premium UI/UX Design & 3D Web Experiences",
+  "short_name": "AURA UX",
+  "description": "Crafting bespoke high-performance websites, luxury SaaS interfaces, 3D interactive web experiences, and emotional digital milestones.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF9F4",
+  "theme_color": "#FBF9F4",
+  "orientation": "portrait-primary",
+  "categories": ["business", "design", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

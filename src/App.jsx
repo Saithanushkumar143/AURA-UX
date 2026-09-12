@@ -7,12 +7,16 @@ import ServiceBrand from './components/ServiceBrand';
 import ServiceSurprise from './components/ServiceSurprise';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   return (
     <div className="min-h-screen bg-[#FBF9F4] text-[#1F1A15] font-sans antialiased selection:bg-[#D4AF37]/30">
+      {/* Dynamic SEO Meta Updater */}
+      <SEO currentPage={currentPage} />
+
       {/* Initial Cinematic Preloader Screen */}
       <Preloader />
 

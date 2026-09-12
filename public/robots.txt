@@ -1,5 +1,14 @@
+﻿# Robots.txt for AURA UX (https://auraux.com)
 User-agent: *
 Allow: /
+Allow: /logo.jpg
+Allow: /service-brand-cover.png
+Allow: /service-surprise-cover.png
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.css$
+Allow: /*.js$
 
 # Host
 Host: https://auraux.com

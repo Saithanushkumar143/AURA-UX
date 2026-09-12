@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, ArrowRight, Tag } from 'lucide-react';
+import { MessageSquare, ArrowRight } from 'lucide-react';
 import FlatbedTruck from './Truck';
 import Airplane from './Airplane';
 import { OfferCard } from './OfferCarousel';
@@ -152,7 +152,7 @@ export default function Services({ setCurrentPage }) {
                 >
                   {/* Thumbnail Cover */}
                   <div className="relative w-full h-[56%] overflow-hidden bg-[#F3EFE6]">
-                    <img src={offers[0].imageSrc} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={offers[0].imageSrc} alt={offers[0].imageAlt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-[9.5px] font-bold text-[#8C6239] uppercase tracking-wider border border-[#8C6239]/20 shadow-sm">
                       {offers[0].tag}
                     </div>
@@ -208,7 +208,7 @@ export default function Services({ setCurrentPage }) {
                 >
                   {/* Thumbnail Cover */}
                   <div className="relative w-full h-[56%] overflow-hidden bg-[#F3EFE6]">
-                    <img src={offers[1].imageSrc} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={offers[1].imageSrc} alt={offers[1].imageAlt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-[9.5px] font-bold text-[#8C6239] uppercase tracking-wider border border-[#8C6239]/20 shadow-sm">
                       {offers[1].tag}
                     </div>
