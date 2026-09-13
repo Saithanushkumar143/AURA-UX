@@ -1,35 +1,35 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const pageMeta = {
   home: {
     title: 'AURA UX | Bespoke UI/UX Design, 3D Web Experiences & Digital Celebrations',
     description: 'AURA UX crafts bespoke high-performance websites, luxury SaaS interfaces, 3D interactive web experiences, and emotional digital milestones tailored for distinction.',
     keywords: 'AURA UX, UI UX Design, Web Design, Web Development, 3D Web Experiences, Bespoke Websites, Corporate UX, Digital Surprises, Luxury Web Design, Frontend Development, React Developer, SaaS Design, Interactive Websites',
-    canonical: 'https://auraux.com/',
+    canonical: 'https://auraux.vercel.app/',
   },
   services: {
     title: 'Our Services | Bespoke Web Design & Interactive Experiences — AURA UX',
     description: 'Explore AURA UX design & engineering services: Corporate UX & bespoke web applications for brands, alongside personalized 3D Digital Surprises & Milestone Celebrations.',
     keywords: 'AURA UX Services, Corporate Web Design, Brand UI UX, Digital Surprises, Interactive 3D Web, Luxury Web Agency',
-    canonical: 'https://auraux.com/#services',
+    canonical: 'https://auraux.vercel.app/#services',
   },
   'service-brand': {
     title: 'Best for Brands | Luxury Web Design, E-Commerce & SaaS Interfaces — AURA UX',
     description: 'High-performance bespoke websites and e-commerce templates including AURA NextStore, AURA Editorial boutique, AURA Heritage fine dining, and AURA Luxe Beauty atelier.',
     keywords: 'Corporate Web Design, E-Commerce Templates, NextStore, Boutique Website, Restaurant Web Design, Luxury Beauty Website, Bespoke SaaS UI',
-    canonical: 'https://auraux.com/#service-brand',
+    canonical: 'https://auraux.vercel.app/#service-brand',
   },
   'service-surprise': {
     title: 'Digital Surprises & Milestone Celebrations | 3D Interactive Web Portals — AURA UX',
     description: 'Interactive birthday storytelling films, candle blowout portals, scrapbook memories, 3D ring box proposals, and romantic anniversary timelines by AURA UX.',
     keywords: 'Digital Surprises, Birthday Website, Interactive Wishboard, Anniversary Timeline, 3D Ring Box, Love Note, Proposal Website, Celebration Web Portals',
-    canonical: 'https://auraux.com/#service-surprise',
+    canonical: 'https://auraux.vercel.app/#service-surprise',
   },
   contact: {
     title: 'Contact AURA UX | Start Your Bespoke Web & 3D Experience Project',
     description: 'Connect with AURA UX for custom website development, SaaS UI/UX design, or interactive milestone celebration experiences. Get in touch via WhatsApp or Email.',
     keywords: 'Contact AURA UX, Hire UI UX Designer, Web Design Consultation, WhatsApp AURA UX, Bespoke Web Development Inquiry',
-    canonical: 'https://auraux.com/#contact',
+    canonical: 'https://auraux.vercel.app/#contact',
   },
 };
 

@@ -161,7 +161,7 @@ export default function Footer({ setCurrentPage }) {
               </a>
               {/* Globe / Website */}
               <a 
-                href="https://auraux.com" 
+                href="https://auraux.vercel.app" 
                 target="_blank" 
                 rel="noreferrer" 
                 aria-label="Website"

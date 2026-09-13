@@ -1,79 +1,79 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Main Homepage & Portfolio Overview -->
   <url>
-    <loc>https://auraux.com/</loc>
+    <loc>https://auraux.vercel.app/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://auraux.com/logo.jpg</image:loc>
+      <image:loc>https://auraux.vercel.app/logo.jpg</image:loc>
       <image:title>AURA UX Logo &amp; Identity</image:title>
       <image:caption>AURA UX — Premium UI/UX Design, Bespoke Websites &amp; 3D Web Experiences</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/service-brand-cover.png</image:loc>
+      <image:loc>https://auraux.vercel.app/service-brand-cover.png</image:loc>
       <image:title>Best for Brands — Corporate UX &amp; Web Development</image:title>
       <image:caption>High-performance bespoke websites, SaaS interfaces, and corporate distinction</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/service-surprise-cover.png</image:loc>
+      <image:loc>https://auraux.vercel.app/service-surprise-cover.png</image:loc>
       <image:title>Digital Surprises &amp; Milestone Celebrations</image:title>
       <image:caption>Interactive birthday films, candle blowout portals, and couple love timelines</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/your-next-store-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/your-next-store-preview.png</image:loc>
       <image:title>AURA NextStore — Modern E-Commerce &amp; Fashion Store</image:title>
       <image:caption>Full-featured online store with shopping cart and instant checkout</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/yns-editorial-store-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/yns-editorial-store-preview.png</image:loc>
       <image:title>AURA Editorial — Minimalist Boutique &amp; Lifestyle Store</image:title>
       <image:caption>Curated fashion boutique with refined catalog filtering and cart drawer</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/heritage-dining-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/heritage-dining-preview.png</image:loc>
       <image:title>AURA Heritage — Luxury Dining &amp; Restaurant Experience</image:title>
       <image:caption>Fine dining culinary website with tasting menus and table reservations</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/luxe-beauty-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/luxe-beauty-preview.png</image:loc>
       <image:title>AURA Luxe Beauty — Haute Artistry &amp; Bridal Studio</image:title>
       <image:caption>Bespoke beauty atelier with service portfolios and appointment booking</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/cinematic-birthday-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/cinematic-birthday-preview.png</image:loc>
       <image:title>AURA Cinematic — 4-Act Storytelling Birthday Film</image:title>
       <image:caption>Emotional 4-act storytelling birthday experience with interactive blooming heart</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/birthday-lux-celebration-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/birthday-lux-celebration-preview.png</image:loc>
       <image:title>AURA CandleGlow — Luxury Birthday Greeting Portal</image:title>
       <image:caption>Interactive candle blowout portal with typed letters and audio voice notes</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/birthday-bestie-scrapbook-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/birthday-bestie-scrapbook-preview.png</image:loc>
       <image:title>AURA Scrapbook — Bestie Memory Wall &amp; Sticky Notes</image:title>
       <image:caption>Nostalgic interactive scrapbook with sticky notes and photo polaroids</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/birthday-surprise-box-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/birthday-surprise-box-preview.png</image:loc>
       <image:title>AURA SurpriseBox — 3D Animated Gift Box Explosion</image:title>
       <image:caption>3D gift unboxing with physics confetti and unlockable coupon vouchers</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/anniversary-forever-vows-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/anniversary-forever-vows-preview.png</image:loc>
       <image:title>AURA ForeverVows — 3D Ring Box &amp; Proposal Story</image:title>
       <image:caption>Luxury wedding and anniversary proposal story with 3D opening ring box</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/reasons-love-jar-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/reasons-love-jar-preview.png</image:loc>
       <image:title>AURA LoveJar — 3D Flippable Reasons to Love You</image:title>
       <image:caption>Interactive heart jar with 3D flippable cards and romantic notes</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://auraux.com/love-note-wifey-preview.png</image:loc>
+      <image:loc>https://auraux.vercel.app/love-note-wifey-preview.png</image:loc>
       <image:title>AURA LoveNote — Interactive Romantic Story &amp; Notes</image:title>
       <image:caption>Delightful interactive couple memory timeline with custom romantic scenes</image:caption>
     </image:image>
