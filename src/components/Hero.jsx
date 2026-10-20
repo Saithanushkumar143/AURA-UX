@@ -35,6 +35,7 @@ export default function Hero({ onExplore }) {
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#503E21] via-[#AA7C11] to-[#251A07]">
             AURA UX
           </span>
+          <span className="sr-only"> — Bespoke UI/UX Design, 3D Web Experiences &amp; Digital Celebrations</span>
         </h1>
 
         {/* Subtitle */}
@@ -47,9 +48,13 @@ export default function Hero({ onExplore }) {
         </p>
 
         {/* Action Button */}
-        <button
-          onClick={onExplore}
-          className="group relative px-8 py-4 rounded-full font-sans font-semibold text-xs md:text-sm tracking-[0.2em] uppercase overflow-hidden border border-[#8C6239]/20 bg-[#8C6239]/5 text-[#1F1A15] hover:border-[#8C6239]/50 hover:bg-[#8C6239]/10 shadow-[0_0_20px_rgba(140,98,57,0.05)] hover:shadow-[0_0_25px_rgba(140,98,57,0.15)] transition-all duration-300 active:scale-95"
+        <a
+          href="#services"
+          onClick={(e) => {
+            e.preventDefault();
+            onExplore();
+          }}
+          className="group relative px-8 py-4 rounded-full font-sans font-semibold text-xs md:text-sm tracking-[0.2em] uppercase overflow-hidden border border-[#8C6239]/20 bg-[#8C6239]/5 text-[#1F1A15] hover:border-[#8C6239]/50 hover:bg-[#8C6239]/10 shadow-[0_0_20px_rgba(140,98,57,0.05)] hover:shadow-[0_0_25px_rgba(140,98,57,0.15)] transition-all duration-300 active:scale-95 inline-flex items-center"
         >
           {/* Glowing Aura inside button */}
           <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-750 bg-gradient-to-r from-[#D8B467]/10 via-[#A9843D]/20 to-[#D8B467]/10 pointer-events-none" />
@@ -70,7 +75,7 @@ export default function Hero({ onExplore }) {
               />
             </svg>
           </span>
-        </button>
+        </a>
       </div>
     </div>
   );

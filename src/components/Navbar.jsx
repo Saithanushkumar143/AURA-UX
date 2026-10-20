@@ -4,25 +4,35 @@ export default function Navbar({ currentPage, setCurrentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'services', label: 'Our Services' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Home', href: '#' },
+    { id: 'services', label: 'Our Services', href: '#services' },
+    { id: 'contact', label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b ${
-      currentPage === 'home' ? 'bg-[#FBF9F4]/85' : 'bg-white/85'
-    } border-[#8C6239]/10 text-[#1F1A15] px-6 py-4 transition-colors duration-300`}>
+    <nav 
+      aria-label="Main Navigation"
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b ${
+        currentPage === 'home' ? 'bg-[#FBF9F4]/85' : 'bg-white/85'
+      } border-[#8C6239]/10 text-[#1F1A15] px-6 py-4 transition-colors duration-300`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo & Brand Name */}
-        <div 
-          className="flex items-center space-x-3 cursor-pointer group"
-          onClick={() => setCurrentPage('home')}
+        <a 
+          href="#"
+          className="flex items-center space-x-3 cursor-pointer group focus:outline-none"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentPage('home');
+          }}
+          aria-label="AURA UX — Home"
         >
           <div className="relative h-10 w-10 rounded-full overflow-hidden border border-[#D4AF37]/50 shadow-[0_0_10px_rgba(212,175,55,0.2)] group-hover:border-[#D4AF37] transition-all">
             <img 
               src="/logo.jpg" 
-              alt="AURA UX Logo" 
+              alt="AURA UX Brand Emblem" 
+              width="40"
+              height="40"
               className="h-full w-full object-cover scale-110" 
             />
           </div>
@@ -30,22 +40,24 @@ export default function Navbar({ currentPage, setCurrentPage }) {
             <span className="text-lg font-bold tracking-[0.2em] font-serif bg-gradient-to-r from-[#503E21] via-[#AA7C11] to-[#251A07] bg-clip-text text-transparent">
               AURA UX
             </span>
-            <span className="text-[8px] tracking-[0.3em] uppercase text-gray-500">
+            <span className="text-[8px] tracking-[0.3em] uppercase text-gray-500 font-sans">
               Digital Experience
             </span>
           </div>
-        </div>
+        </a>
 
         {/* Right side: Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <button
+            <a
               key={link.id}
-              onClick={() => {
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
                 setCurrentPage(link.id);
                 setIsOpen(false);
               }}
-              className={`text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 relative py-1 ${
+              className={`text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 relative py-1 focus:outline-none ${
                 currentPage === link.id
                   ? 'text-[#8C6239]'
                   : 'text-[#7A7065] hover:text-[#1F1A15]'
@@ -55,7 +67,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               {currentPage === link.id && (
                 <span className="absolute bottom-0 left-0 right-0 h-[1.5px] rounded-full bg-[#8C6239]" />
               )}
-            </button>
+            </a>
           ))}
         </div>
 
@@ -63,8 +75,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
         <div className="flex items-center md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-full text-[#7A7065] hover:text-[#1F1A15]"
-            aria-label="Toggle menu"
+            className="p-2 rounded-full text-[#7A7065] hover:text-[#1F1A15] focus:outline-none"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -83,9 +96,11 @@ export default function Navbar({ currentPage, setCurrentPage }) {
           currentPage === 'home' ? 'bg-[#FBF9F4]/95' : 'bg-white/95'
         } border-[#8C6239]/10`}>
           {navLinks.map((link) => (
-            <button
+            <a
               key={link.id}
-              onClick={() => {
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
                 setCurrentPage(link.id);
                 setIsOpen(false);
               }}
@@ -96,7 +111,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               }`}
             >
               {link.label}
-            </button>
+            </a>
           ))}
         </div>
       )}

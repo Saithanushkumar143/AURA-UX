@@ -42,7 +42,15 @@ export default function Footer({ setCurrentPage }) {
               <li>
                 <a 
                   href="#faqs" 
-                  onClick={(e) => { e.preventDefault(); setCurrentPage?.('services'); }}
+                  onClick={(e) => { 
+                    e.preventDefault(); 
+                    setCurrentPage?.('services'); 
+                    window.location.hash = 'faqs';
+                    setTimeout(() => {
+                      const el = document.getElementById('faqs');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  }}
                   className="hover:text-[#1F1A15] transition-colors inline-block"
                 >
                   FAQs
@@ -50,11 +58,14 @@ export default function Footer({ setCurrentPage }) {
               </li>
               <li>
                 <a 
-                  href="#support" 
-                  onClick={(e) => { e.preventDefault(); setCurrentPage?.('contact'); }}
+                  href="#contact" 
+                  onClick={(e) => { 
+                    e.preventDefault(); 
+                    setCurrentPage?.('contact'); 
+                  }}
                   className="hover:text-[#1F1A15] transition-colors inline-block"
                 >
-                  Support
+                  Support &amp; Contact
                 </a>
               </li>
               <li className="flex items-center space-x-2">

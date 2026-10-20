@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -10,11 +10,70 @@ import Footer from './components/Footer';
 import SEO from './components/SEO';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const getInitialPage = () => {
+    if (typeof window === 'undefined') return 'home';
+    const hash = window.location.hash.replace('#', '').toLowerCase();
+    if (['services', 'service-brand', 'service-surprise', 'contact'].includes(hash)) {
+      return hash;
+    }
+    if (hash === 'faqs' || hash === 'faq') {
+      return 'services';
+    }
+    return 'home';
+  };
+
+  const [currentPage, setCurrentPageState] = useState(getInitialPage);
+
+  const setCurrentPage = (page) => {
+    setCurrentPageState(page);
+    if (page === 'home') {
+      if (window.location.hash) {
+        history.pushState(null, '', window.location.pathname);
+      }
+    } else {
+      if (window.location.hash !== `#${page}`) {
+        window.location.hash = page;
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (['services', 'service-brand', 'service-surprise', 'contact'].includes(hash)) {
+        setCurrentPageState(hash);
+      } else if (hash === 'faqs' || hash === 'faq') {
+        setCurrentPageState('services');
+        setTimeout(() => {
+          const faqElem = document.getElementById('faqs');
+          if (faqElem) faqElem.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      } else if (!hash || hash === 'home') {
+        setCurrentPageState('home');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
+
+    // Initial check for #faqs hash on load
+    if (window.location.hash === '#faqs' || window.location.hash === '#faq') {
+      setTimeout(() => {
+        const faqElem = document.getElementById('faqs');
+        if (faqElem) faqElem.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#FBF9F4] text-[#1F1A15] font-sans antialiased selection:bg-[#D4AF37]/30">
-      {/* Dynamic SEO Meta Updater */}
+      {/* Dynamic SEO Meta & Canonical Updater */}
       <SEO currentPage={currentPage} />
 
       {/* Initial Cinematic Preloader Screen */}
@@ -27,7 +86,7 @@ function App() {
       />
 
       {/* Main Content Area */}
-      <main>
+      <main id="main-content">
         {currentPage === 'home' ? (
           <Hero 
             onExplore={() => setCurrentPage('services')} 

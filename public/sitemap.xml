@@ -4,8 +4,8 @@
   <!-- Main Homepage & Portfolio Overview -->
   <url>
     <loc>https://auraux.vercel.app/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://auraux.vercel.app/logo.jpg</image:loc>

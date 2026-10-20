@@ -4,6 +4,7 @@ import { MessageSquare, ArrowRight } from 'lucide-react';
 import FlatbedTruck from './Truck';
 import Airplane from './Airplane';
 import { OfferCard } from './OfferCarousel';
+import FAQ from './FAQ';
 
 export default function Services({ setCurrentPage }) {
   const whatsappNumber = '919490056028';
@@ -384,6 +385,9 @@ export default function Services({ setCurrentPage }) {
             <span>Consult on WhatsApp</span>
           </a>
         </div>
+
+        {/* Frequently Asked Questions Section (Visible SEO & Rich Snippet Compliance) */}
+        <FAQ />
 
       </div>
     </div>

@@ -128,21 +128,29 @@ export default function ServiceSurprise({ setCurrentPage }) {
     <div className="relative min-h-screen w-full flex flex-col pt-24 pb-16 overflow-hidden px-4 md:px-8 bg-transparent text-[#1F1A15]">
       {/* Navigation Top Bar */}
       <div className="max-w-6xl mx-auto w-full mb-6 z-10 flex items-center justify-between gap-4">
-        <button
-          onClick={() => setCurrentPage('services')}
+        <a
+          href="#services"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentPage('services');
+          }}
           className="group inline-flex items-center space-x-2 text-xs uppercase tracking-widest font-semibold transition-all text-[#7A7065] hover:text-[#8C6239] cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
           <span>Back to Services</span>
-        </button>
+        </a>
 
-        <button
-          onClick={() => setCurrentPage('service-brand')}
+        <a
+          href="#service-brand"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentPage('service-brand');
+          }}
           className="group inline-flex items-center space-x-2 text-xs uppercase tracking-wider font-semibold transition-all px-3.5 py-1.5 rounded-full bg-white/90 border border-[#8C6239]/20 hover:border-[#8C6239]/60 text-[#8C6239] hover:bg-white shadow-sm cursor-pointer"
         >
           <span>Best for Brands</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-        </button>
+        </a>
       </div>
 
       {/* Main Container */}

@@ -94,13 +94,17 @@ export default function Contact({ setCurrentPage }) {
       
       {/* Back Button */}
       <div className="max-w-4xl mx-auto w-full mb-4 z-10">
-        <button
-          onClick={() => setCurrentPage('home')}
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentPage('home');
+          }}
           className="group inline-flex items-center space-x-2 text-xs uppercase tracking-widest font-semibold transition-colors text-[#7A7065] hover:text-[#8C6239] cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
           <span>Back to Home</span>
-        </button>
+        </a>
       </div>
 
       {/* Main 3D Perspective Stage */}
